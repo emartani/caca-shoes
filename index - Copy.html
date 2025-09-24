@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caça-Palavras dos calçados - SHOES</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-41JP32RP2Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-41JP32RP2Z');
+</script>
+
+<body>
+
+  <div id="main-container">
+    <h1>Caça-Palavras dos calçados - SHOES</h1>
+
+    <div>
+      <label for="nivel"><strong>Nível:</strong></label>
+      <select id="nivel" onchange="gerarCacaPalavras()">
+        <option value="facil">Fácil</option>
+        <option value="dificil">Difícil</option>
+      </select>
+    </div>
+
+    <div id="game-area-container">
+      <div id="cacaPalavrasContainer">
+      </div>
+
+      <div id="instructions">
+        <h2>Instruções:</h2>
+        <ol>
+          <li>Escolha o nível de dificuldade do jogo antes de iniciar. Fácil=palavras apenas na horizontal / Difícil=horizontal + vertical.</li>
+          <li>Se não souber qual a palavra, clique na imagem que a palavra aparecerá.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div id="palavrasEncontrar">
+      <h2>Palavras a Encontrar:</h2>
+      <ul id="listaPalavras">
+      </ul>
+    </div>
+
+    <footer>
+      Desenvolvido por Emerson Martani
+    </footer>
+  </div>
+
+  <div id="parabensMensagem">
+      🎉 Uhuu! Você é um super detetive de palavras! 🥳 Encontrou todassss! 🤩
+  </div>
+
+  <div id="fireworksContainer"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
