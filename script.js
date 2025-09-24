@@ -93,6 +93,9 @@ function gerarCacaPalavras() {
     // --- FIM DA LÓGICA ---
   }
 
+  // Força o navegador a recalcular a largura da grade
+  cacaPalavrasContainer.style.gridTemplateColumns = `repeat(${colunas}, 1fr)`;
+
   // Gera o grid e o exibe na tela
   // Passa 'horizontal' para fácil e 'horizontal-vertical' para difícil (para controlar as direções na função preencherPalavras)
   gerarGrid(linhas, colunas, palavrasNivel, nivel === "facil" ? "horizontal" : "horizontal-vertical");
