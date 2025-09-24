@@ -91,6 +91,9 @@ function gerarCacaPalavras() {
     if (linhas < 12) linhas = 12;
     if (colunas < 12) colunas = 12;
     // --- FIM DA LÓGICA ---
+    
+    cacaPalavrasContainer.style.width = '100%';
+    cacaPalavrasContainer.style.maxWidth = '600px';
   }
 
   // Força o navegador a recalcular a largura da grade
