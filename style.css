@@ -56,6 +56,40 @@ body {
     align-items: center;
 }
 
+.cell {
+    /* O tamanho da célula se adapta à menor dimensão da tela */
+    width: 6.5vmin;
+    height: 6.5vmin;
+    max-width: 40px;
+    max-height: 40px;
+    border: 2px solid #8A2BE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #1a7025;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.grid-container {
+    display: grid;
+    gap: 1px;
+    margin: 20px auto;
+    width: 90vw;
+    max-width: 800px;
+    
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+        gap: 10px; /* Por exemplo, um valor fixo de 15px para o espaçamento */
+    }
+}
+
 h1 {
   color: #175f2e;
   text-align: center;
@@ -76,30 +110,11 @@ div > label {
     font-weight: bold;
 }
 
-.grid-container {
-    display: grid;
-    gap: 5px;
-    margin: 20px auto;
-    width: 90vw;
-    max-width: 800px;
-}
 
-.cell {
-    /* O tamanho da célula se adapta à menor dimensão da tela */
-    width: auto; /*6.5vmin;*/
-    height: 6.5vmin;
-    border: 2px solid #8A2BE2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vmin;
-    font-weight: bold;
-    border-radius: 8px;
-    color: #1a7025;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.3s ease;
-}
+
+
+
+
 
 .cell:hover {
     background-color: #9acfaa;
@@ -229,3 +244,4 @@ footer {
     font-size: 0.9em;
     border-top: 1px solid #87CEEB;
 }
+
