@@ -33,22 +33,31 @@
     }
 }
 
-/* ------------------ INÍCIO: AJUSTES DE LAYOUT ------------------ */
+/* ------------------ INÍCIO: AJUSTES DE LAYOUT RESPONSIVO ------------------ */
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #c1dcea;
+    background-color: #ebdee9;
+    /* Alinhamento geral */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#main-container {
+    width: 100%;
+    max-width: 900px; /* Limita a largura do jogo em telas grandes */
+    margin: 0 auto; /* Centraliza o contêiner */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-  color: #085e27;
+  color: #af13ce;
   text-align: center;
 }
 
@@ -61,35 +70,27 @@ div > label {
 #nivel {
     padding: 8px;
     font-size: 1em;
-    border: 2px solid #217f3a;
+    border: 2px solid #FF69B4;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-#game-area-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .grid-container {
     display: grid;
     gap: 5px;
     margin: 20px auto;
-    width: 90vw; /* Ajusta a largura do grid em telas menores */
-    max-width: 600px; /* Limita a largura em telas maiores */
+    width: 90vw;
+    max-width: 600px;
 }
 
 .cell {
-    /* Usa vmin para que as células se adaptem a qualquer tamanho de tela */
+    /* O tamanho da célula se adapta à menor dimensão da tela */
     width: 6.5vmin;
     height: 6.5vmin;
     border: 2px solid #8A2BE2;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Ajusta o tamanho da fonte com vmin também */
     font-size: 3vmin;
     font-weight: bold;
     border-radius: 8px;
@@ -148,7 +149,7 @@ div > label {
 }
 
 #listaPalavras li img {
-    /* Usa vw para imagens, com um tamanho máximo para telas grandes */
+    /* O tamanho da imagem se adapta à largura da tela */
     width: 12vw;
     height: 12vw;
     max-width: 60px;
